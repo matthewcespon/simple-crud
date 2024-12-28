@@ -23,7 +23,7 @@ interface Filter {
   color: string;
 }
 
-export const initialFilters: Filter[] = [
+const initialFilters: Filter[] = [
   { name: "Developer", color: "#FFB3BA" }, // Light Pink
   { name: "Manager", color: "#FFDFBA" }, // Light Orange
   { name: "Senior Dev", color: "#FFFFBA" }, // Light Yellow
