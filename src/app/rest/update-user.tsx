@@ -32,7 +32,7 @@ export const UpdateUser: React.FC<UpdateUserProps> = ({ onUserUpdated, hasFetche
       return
     }
     setFetchLoading(true)
-    fetch(`http://localhost:8080/api/findById?id=${userId}`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/findById?id=${userId}`)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch user.")
@@ -63,7 +63,7 @@ export const UpdateUser: React.FC<UpdateUserProps> = ({ onUserUpdated, hasFetche
   // PUT request to update user
   const handleUpdateUser = (values: { id: number; username: string }) => {
     setLoading(true)
-    fetch("http://localhost:8080/api/update", {
+    fetch(`${process.env.REACT_APP_API_URL}/api/update`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

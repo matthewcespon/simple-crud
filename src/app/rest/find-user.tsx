@@ -25,7 +25,7 @@ export const FindUser: React.FC<FindUserProps> = ({ hasFetched}) => {
 
     setLoading(true)
     setTimeout(() => {
-      fetch(`http://localhost:8080/api/findById?id=${idNumber}`)
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/findById?id=${idNumber}`)
         .then(res => {
           if (!res.ok) {
             throw new Error("User not found.")

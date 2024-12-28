@@ -27,7 +27,7 @@ export const DeleteUser: React.FC<DeleteUserProps> = ({ setUsers, hasFetched }) 
     }
 
     setDeleting(true)
-    fetch(`http://localhost:8080/api/deleteById?id=${idNumber}`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/deleteById?id=${idNumber}`, {
       method: 'DELETE',
     })
       .then(res => {

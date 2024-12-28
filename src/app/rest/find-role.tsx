@@ -23,7 +23,7 @@ export const FindRole: React.FC<FindRoleProps> = ({ hasFetched, filters }) => {
 
     setLoading(true)
     setTimeout(() => {
-      fetch(`http://localhost:8080/api/findByRole?role=${findRole}`)
+      fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/findByRole?role=${findRole}`)
         .then(res => {
           if (!res.ok) {
             throw new Error("Role not found.")

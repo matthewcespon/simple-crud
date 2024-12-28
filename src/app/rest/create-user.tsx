@@ -17,7 +17,7 @@ export const CreateUser: React.FC<CreateUserProps> = ({ onUserCreated, filters, 
 
   const handleCreateUser = (values: { username: string, email: string, role: string, password: string }) => {
     setLoading(true)
-    fetch(`http://localhost:8080/api/save`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/save`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

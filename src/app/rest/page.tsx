@@ -123,7 +123,7 @@ export default function MainPage() {
 
   const handleFetchUsers = () => {
     setLoading(true);
-    fetch(`http://localhost:8080/api/findAll`)
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/findAll`)
       .then((res) => {
         if (!res.ok) {
           throw new Error("Failed to fetch!");
