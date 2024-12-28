@@ -27,7 +27,7 @@ export default function LandingPage() {
             Get Started
           </Link>
           <Link
-            href="#"
+            href="https://github.com/matthewcespon/simple-crud"
             className="inline-flex items-center px-4 py-3 rounded-lg bg-neutral-800/50 text-gray-200 hover:bg-neutral-700/50 transition-all backdrop-blur-sm border border-neutral-700/30"
             aria-label="View this project on GitHub"
           >
