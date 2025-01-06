@@ -63,7 +63,7 @@ export const UpdateUser: React.FC<UpdateUserProps> = ({ onUserUpdated, hasFetche
   // PUT request to update user
   const handleUpdateUser = (values: { id: number; username: string }) => {
     setLoading(true)
-    fetch(`${process.env.NEXT_APP_API_URL}/api/update`, {
+    fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/update`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
